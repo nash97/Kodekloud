@@ -1,0 +1,16 @@
+Login to backup Server:-ssh clint@stbkp01
+Become root:-sudo su -
+Go to Repos directory:-cd /etc/yum.repos.d/
+vi local_yum.repo
+Add these lines
+[local_yum]
+name=local_yum
+baseurl=file:///packages/downloaded_rpms/
+enabled=1
+gpgcheck=0
+ 
+Save and exit
+
+yum clean all
+yum repolist
+yum install --disablerepo="*" --enablerepo="local_yum" wget

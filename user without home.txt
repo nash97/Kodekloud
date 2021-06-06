@@ -1,0 +1,10 @@
+Create User named ammar in App Server 1 without home directory
+
+Solutions:-
+
+Go to App Server 1 - ssh tony@stapp01
+Go as root user - sudo su -
+Check id of ammar if exists - id ammar
+Check content of /etc/passwd - cat /etc/passwd
+Now create user without home directory - useradd -M ammar
+check home directory belongs to which directory - ll /home/
