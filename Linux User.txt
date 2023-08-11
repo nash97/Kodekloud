@@ -8,14 +8,12 @@ b. Set UID to 1755 and its home directory to /var/www/kareem
 
 
 Solutions:
+//Go to Server 3
+ssh banner@stapp03
 
- sudo useradd -u 1755 -d /var/www/mark mark
- cat /etc/passwd
- cd /var/
- ls
- sudo mkdir www
- ls
- sudo mkdir mark
- ls -la
- sudo chown -R mark mark./
- ls -la
+// Add user kareem with sudo permission :
+sudo useradd -u 1755 -d /var/www/kareem kareem
+
+//Now check the user id with its home directory created:
+id kareem
+cat /etc/passwd
