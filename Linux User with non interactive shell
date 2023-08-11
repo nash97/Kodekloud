@@ -1,0 +1,6 @@
+Question:  Create user james in app server 2 with non interactive shell.
+
+
+Solution:
+Go to app server2: ssh steve@stapp02
+sudo useradd james -s /sbin/nologin
